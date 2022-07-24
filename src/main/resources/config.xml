@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="argumentsKotlin" class="core.car.kotlin.Arguments">
+        <constructor-arg name="message" value="On Secret mission"/>
+        <constructor-arg name="email" value="secret@secret.com"/>
+        <constructor-arg name="age" value="38"/>
+    </bean>
+    <bean id="argumentsJava" class="core.car.java.Arguments">
+        <constructor-arg name="message" value="On Secret mission"/>
+        <constructor-arg name="email" value="secret@secret.com"/>
+        <constructor-arg name="age" value="38"/>
+    </bean>
+
+    <bean id="argumentsType" class="core.car.java.Arguments">
+        <constructor-arg type="int" value="38"/>
+        <constructor-arg type="java.lang.String" value="On Secret mission"/>
+        <constructor-arg type="java.lang.String" value="secret@secret.com"/>
+    </bean>
+
+    <bean id="argumentsIndex" class="core.car.java.Arguments">
+        <constructor-arg index="2" value="38"/>
+        <constructor-arg index="0" value="On Secret mission"/>
+        <constructor-arg index="1" value="secret@secret.com"/>
+    </bean>
+
+
+
+
+</beans>
